@@ -14,6 +14,7 @@ function getProductChoosen() {
 }
 
 //Fuction to Display the details of a product
+
 function detailofproduct(Product) {
 
 let HTMLProductlist = `<div class="productlist">
@@ -57,11 +58,11 @@ async function submitProduct() {
         })
 }
 
-//Ajouter le produit à l'array Panier défini en dehors de la session
+//Ajouter le produit à l'array Panier
 
 function pushproduct(Myproduct) {
 
-var Panier = JSON.parse(window.localStorage.getItem('User1'));
+var Panier = JSON.parse(window.localStorage.getItem('Cart'));
 if (Panier === null) {var Panier = []};
 
 Panier.push(Myproduct);

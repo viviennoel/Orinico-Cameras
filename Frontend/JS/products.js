@@ -1,4 +1,4 @@
-﻿import Product from Product;
+﻿import { Product } from './Product.js';
 
 //FUNCTION PRODUCTLIST PAGE + creating productlist (Function productlist) + displaying the list (Function insertlisthtml)
 function DisplayProductList() {
@@ -37,11 +37,10 @@ function insertlisthtml(productlist) {
     document.getElementById('products').innerHTML = HTMLProductlist;
 }
 
-//Function to get the queryParams and relocate the window
 function getqueryParams(Productid) {
     let queryParams = new URLSearchParams(window.location.search);
+    console.log(Productid);
     queryParams.set("id", Productid);
     history.pushState(null, null, "?" + queryParams.toString());
     window.location.replace("productdetail.html" + "?" + queryParams.toString());
-    alert('The page was queryParameters were successfully added');
 }

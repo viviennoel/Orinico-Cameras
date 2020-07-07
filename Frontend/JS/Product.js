@@ -1,4 +1,5 @@
-﻿class Product {
+﻿
+export class Product {
     constructor(id, name, price, description, imageUrl) {
         this._id = id;
         this._name = name;
@@ -39,5 +40,3 @@
         this._imageUrl = this.imageUrl
     }
 }
-
-export default Product;
